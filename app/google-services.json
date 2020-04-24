@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "561909997348",
+    "firebase_url": "https://fir-ml-72b4c.firebaseio.com",
+    "project_id": "fir-ml-72b4c",
+    "storage_bucket": "fir-ml-72b4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561909997348:android:c128dc2d4c4d5734ed1db1",
+        "android_client_info": {
+          "package_name": "com.richarddewan.barcodescanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561909997348-es2c6sjjgerpkjp8rf5o9at77jbuc6jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ3YVA_1G9FanWAwG7mLqrrHQ8eN3mrjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561909997348-es2c6sjjgerpkjp8rf5o9at77jbuc6jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561909997348:android:fdb58c3bc75ac678ed1db1",
+        "android_client_info": {
+          "package_name": "com.richarddewan.languagetranslation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561909997348-es2c6sjjgerpkjp8rf5o9at77jbuc6jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ3YVA_1G9FanWAwG7mLqrrHQ8eN3mrjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561909997348-es2c6sjjgerpkjp8rf5o9at77jbuc6jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:561909997348:android:64280a89afaf9849ed1db1",
+        "android_client_info": {
+          "package_name": "com.richarddewan.textrecognizer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "561909997348-es2c6sjjgerpkjp8rf5o9at77jbuc6jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ3YVA_1G9FanWAwG7mLqrrHQ8eN3mrjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "561909997348-es2c6sjjgerpkjp8rf5o9at77jbuc6jd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

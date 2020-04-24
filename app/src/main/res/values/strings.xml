@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BarcodeScanner</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="product_barcode">Product Barcode</string>
+</resources>
