@@ -2,4 +2,7 @@
     <string name="app_name">BarcodeScanner</string>
     <string name="capture_image">Capture Image</string>
     <string name="product_barcode">Product Barcode</string>
+    <string name="browse_image">Browse Image</string>
+    <string name="image_description">Image Description</string>
+    <string name="show_hide_image">Show / Hide ImageView</string>
 </resources>

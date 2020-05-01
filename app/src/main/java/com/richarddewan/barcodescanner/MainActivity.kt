@@ -1,6 +1,8 @@
 package com.richarddewan.barcodescanner
 
 import android.Manifest
+import android.app.Activity
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Matrix
 import android.net.Uri
@@ -11,6 +13,7 @@ import android.util.Log
 import android.util.Size
 import android.view.Surface
 import android.view.TextureView
+import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -38,6 +41,7 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
     companion object {
         const val TAG = "MainActivity"
         private const val REQUEST_CODE_PERMISSIONS = 10
+        private const val RC_PICK_FILE = 1
     }
 
     private val PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
@@ -78,6 +82,26 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         //get detector and specify the formats to recognize:
         firebaseVisionBarcodeDetector = FirebaseVision.getInstance()
             .getVisionBarcodeDetector(firebaseVisionBarcodeDetectorOptions)
+
+        btnImportImage.setOnClickListener {
+            Intent(Intent.ACTION_GET_CONTENT).run {
+                type = "image/*"
+                putExtra(Intent.EXTRA_LOCAL_ONLY,true)
+                startActivityForResult(this, RC_PICK_FILE)
+            }
+        }
+
+
+        sw_image.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked){
+                viewFinder.visibility = View.INVISIBLE
+                imageView.visibility = View.VISIBLE
+            }
+            else {
+                viewFinder.visibility = View.VISIBLE
+                imageView.visibility = View.INVISIBLE
+            }
+        }
 
     }
 
@@ -253,6 +277,26 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
                     Toast.LENGTH_SHORT
                 ).show()
                 finish()
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == RC_PICK_FILE){
+            if (resultCode == Activity.RESULT_OK){
+                view_finder.visibility = View.INVISIBLE
+                imageView.visibility = View.VISIBLE
+                imageView.setImageURI(data?.data)
+                sw_image.isChecked = true
+
+                firebaseVisionImage =
+                    FirebaseVisionImage.fromFilePath(
+                        baseContext,
+                        data?.data!!
+                    )
+
+                startDetector(firebaseVisionImage)
             }
         }
     }
